@@ -13,7 +13,7 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
 
-        wakeup-source = true;
+        wakeup-source;
         extra-gpios = 3
 
         col-gpios
