@@ -1,3 +1,8 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+#include "zherkin-layouts.dtsi"
+
+
 /* Make layout upside down = USB port on left side 
 #undef MATRIX_ROW_PINS
 #undef MATRIX_COL_PINS
