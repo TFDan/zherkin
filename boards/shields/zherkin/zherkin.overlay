@@ -14,7 +14,7 @@
         diode-direction = "col2row";
 
         wakeup-source;
-        extra-gpios = 3
+        extra-gpios = 3;
 
         col-gpios
             = <&pro_micro 3 GPIO_ACTIVE_HIGH>
