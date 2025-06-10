@@ -10,61 +10,52 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            // |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
-            // |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
-            // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    | CTRL+A  | CTRL+C  |  |  CTRL+V |  CTRL+X |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
-            //                               |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |  |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
+
 
             bindings = <
 &kp Q        &kp W         &kp E           &kp R    &kp T         &kp Y        &kp U    &kp I    &kp O        &kp P
-&kp A        &kp S         &kp D           &kp F    &kp G         &kp H        &kp J    &kp K    &kp L        &kp ENTER
-&mt LCTRL Z  &mt LSHIFT X  &mt LEFT_ALT C  &lt 4 V  &lt 2 ESCAPE  &lt 1 SPACE  &lt 5 B  &lt 3 N  &mt RCTRL M  &mt RSHIFT BACKSPACE
+&kp A        &kp S         &kp D           &kp F    &kp G         &kp H        &kp J    &kp K    &kp L        &mt RSHIFT BACKSPACE
+&mt LCTRL Z  &mt LSHIFT X  &mt LEFT_ALT C  &lt 1 V  &lt 2 ESCAPE  &lt 3 SPACE  &lt 4 B  &lt 5 N  &mt RCTRL M  &mt RGUI ENTER
             >;
         };
 
         layer_1 {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            // |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
-            // |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
-            // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    | CTRL+A  | CTRL+C  |  |  CTRL+V |  CTRL+X |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
-            //                               |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |  |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
 
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5      &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5      &kp F6        &kp F7  &kp F8  &kp F9  &kp F10
-&kt ESCAPE    &none         &none         &none         &kp DELETE  &none         &none   &none   &none   &studio_unlock
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7  &kp F8  &kp F9  &kp F10
+&kp ESCAPE    &none         &none         &none         &kp DELETE    &none         &none   &none   &none   &studio_unlock
             >;
         };
 
         layer_2 {
             bindings = <
-&kt EXCLAMATION  &kt AT_SIGN  &kt HASH      &kt DOLLAR         &kt PERCENT  &kt AMPERSAND  &kt CARET   &kt AMPERSAND  &kt LEFT_PARENTHESIS  &kt RIGHT_PARENTHESIS
-&kt MINUS        &kt PLUS     &kt SQT       &kt DOUBLE_QUOTES  &kt SLASH    &kt BACKSLASH  &kt PERIOD  &kt COMMA      &kt UP_ARROW          &kt SEMICOLON
-&kt UNDERSCORE   &kt EQUAL    &kt QUESTION  &kt PIPE           &none        &none          &kt COLON   &kt LEFT       &kt DOWN              &kt RIGHT
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH      &kp DOLLAR         &kp PERCENT  &kp AMPERSAND  &kp CARET   &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp MINUS        &kp PLUS     &kp SQT       &kp DOUBLE_QUOTES  &kp SLASH    &kp BACKSLASH  &kp PERIOD  &kp COMMA      &kp UP_ARROW          &kp SEMICOLON
+&kp UNDERSCORE   &kp EQUAL    &kp QUESTION  &kp PIPE           &none        &none          &kp COLON   &kp LEFT       &kp DOWN              &kp RIGHT
             >;
         };
 
         layer_3 {
             bindings = <
-&none    &none  &none  &none  &none  &none  &none  &none  &kt LEFT_BRACKET  &kt RIGHT_BRACKET
-&kt TAB  &none  &none  &none  &none  &none  &none  &none  &none             &none
+&none    &none  &none  &none  &none  &none  &none  &none  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp TAB  &none  &none  &none  &none  &none  &none  &none  &none             &none
 &none    &none  &none  &none  &none  &none  &none  &none  &none             &none
             >;
         };
 
         layer_4 {
             bindings = <
-&none    &none  &none  &none  &none  &none  &none     &none          &kt LEFT_BRACE  &kt RIGHT_BRACE
-&kt TAB  &none  &none  &none  &none  &none  &none     &none          &none           &none
-&none    &none  &none  &none  &none  &none  &kt HOME  &kt PAGE_DOWN  &kt PG_UP       &kt END
+&none    &none  &none  &none  &none  &none  &none     &none          &kp LEFT_BRACE  &kp RIGHT_BRACE
+&kp TAB  &none  &none  &none  &none  &none  &none     &none          &none           &none
+&none    &none  &none  &none  &none  &none  &kp HOME  &kp PAGE_DOWN  &kp PG_UP       &kp END
             >;
         };
 
         layer_5 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans       &trans  &trans  &trans  &kt LESS_THAN  &kt GREATER_THAN
-&trans        &trans        &trans        &trans  &trans       &trans  &trans  &trans  &trans         &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans       &trans  &trans  &trans  &kp LESS_THAN  &kp GREATER_THAN
+&bl BL_TOG    &bl BL_INC    &bl BL_DEC    &trans  &trans       &trans  &trans  &trans  &trans         &trans
 &bt BT_CLR    &none         &none         &trans  &bootloader  &trans  &trans  &trans  &trans         &trans
             >;
         };

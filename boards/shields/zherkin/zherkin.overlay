@@ -8,6 +8,7 @@
     chosen {
         zmk,physical-layout = &physical_layout0;
         zmk,backlight = &backlight;
+        zmk,battery = &vbatt;
     };
 
     kscan0: kscan_0 {
@@ -56,6 +57,10 @@
         pwm_led_0 {
             pwms = <&pwm0 0 PWM_MSEC(10) PWM_POLARITY_NORMAL>;
         };
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
     };
 };
 
